@@ -1,0 +1,273 @@
+{
+	"info": {
+		"_postman_id": "0c63923a-2d88-4d15-8d91-6b38a83ad79e",
+		"name": "Soal Tes Backend Adhivasindo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19492809"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nim",
+							"value": "1234567890",
+							"type": "text"
+						},
+						{
+							"key": "nama",
+							"value": "Admin",
+							"type": "text"
+						},
+						{
+							"key": "ymd",
+							"value": "19500101",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tambah User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuaW0iOiIxMjM0NTY3ODkwIiwibmFtYSI6IkFkbWluIiwieW1kIjoiMTk1MDAxMDEiLCJpYXQiOjE3Mzg4NTMzNjIsImV4cCI6MTczODg1Njk2Mn0.6e7ysCGdGlha-3jSfS5xN8EmTHlV_y17iW_gFE30s7Y",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nim",
+							"value": "9875877258",
+							"type": "text"
+						},
+						{
+							"key": "nama",
+							"value": "Bryan",
+							"type": "text"
+						},
+						{
+							"key": "ymd",
+							"value": "31082000",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/tambah_user",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"tambah_user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ubah User",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuaW0iOiIxMjM0NTY3ODkwIiwibmFtYSI6IkFkbWluIiwieW1kIjoiMTk1MDAxMDEiLCJpYXQiOjE3Mzg4NTMzNjIsImV4cCI6MTczODg1Njk2Mn0.6e7ysCGdGlha-3jSfS5xN8EmTHlV_y17iW_gFE30s7Y",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nama",
+							"value": "Bryans",
+							"type": "text"
+						},
+						{
+							"key": "ymd",
+							"value": "31082001",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/ubah_user/9875877258",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"ubah_user",
+						"9875877258"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Hapus User",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuaW0iOiIxMjM0NTY3ODkwIiwibmFtYSI6IkFkbWluIiwieW1kIjoiMTk1MDAxMDEiLCJpYXQiOjE3Mzg4NTMzNjIsImV4cCI6MTczODg1Njk2Mn0.6e7ysCGdGlha-3jSfS5xN8EmTHlV_y17iW_gFE30s7Y",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/api/hapus_user/9875877258",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"hapus_user",
+						"9875877258"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cari Nama User",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuaW0iOiIxMjM0NTY3ODkwIiwibmFtYSI6IkFkbWluIiwieW1kIjoiMTk1MDAxMDEiLCJpYXQiOjE3Mzg4NTMzNjIsImV4cCI6MTczODg1Njk2Mn0.6e7ysCGdGlha-3jSfS5xN8EmTHlV_y17iW_gFE30s7Y",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/api/cari_nama_user?nama=Turner Mia",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"cari_nama_user"
+					],
+					"query": [
+						{
+							"key": "nama",
+							"value": "Turner Mia"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cari NIM User",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuaW0iOiIxMjM0NTY3ODkwIiwibmFtYSI6IkFkbWluIiwieW1kIjoiMTk1MDAxMDEiLCJpYXQiOjE3Mzg4NTMzNjIsImV4cCI6MTczODg1Njk2Mn0.6e7ysCGdGlha-3jSfS5xN8EmTHlV_y17iW_gFE30s7Y",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/api/cari_nim_user?nim=9352078461",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"cari_nim_user"
+					],
+					"query": [
+						{
+							"key": "nim",
+							"value": "9352078461"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cari YMD User",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuaW0iOiIxMjM0NTY3ODkwIiwibmFtYSI6IkFkbWluIiwieW1kIjoiMTk1MDAxMDEiLCJpYXQiOjE3Mzg4NTMzNjIsImV4cCI6MTczODg1Njk2Mn0.6e7ysCGdGlha-3jSfS5xN8EmTHlV_y17iW_gFE30s7Y",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/api/cari_ymd_user?ymd=20230405",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"cari_ymd_user"
+					],
+					"query": [
+						{
+							"key": "ymd",
+							"value": "20230405"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Data API",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://bit.ly/48ejMhW",
+					"protocol": "https",
+					"host": [
+						"bit",
+						"ly"
+					],
+					"path": [
+						"48ejMhW"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
